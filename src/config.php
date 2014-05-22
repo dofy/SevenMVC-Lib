@@ -1,4 +1,10 @@
 <?php
+/**
+ * Author:  Seven Yu
+ * E-Mail:  dofyyu@gmail.com
+ * Version: 2.0.1
+ * Update:  2014/05/22 
+ */
 
 // ====================================
 // === 数据库配置 (暂时只支持 MySQL) ===
@@ -26,9 +32,11 @@ defined('DEBUG') or define('DEBUG', false);
 
 // 是否开启 Smarty cache
 defined('Smarty_CACHE') or define('Smarty_CACHE', true);
+// Smarty 缓存失效时间 (秒)
+defined('SMARTY_CACHE_LIFETIME') or define('SMARTY_CACHE_LIFETIME', 600);
 // 是否开启 Smarty 的 debug 模式
 defined('Smarty_DEBUG') or define('Smarty_DEBUG', false);
 
-// 用户代码路径 (controllers, models 等文件夹所在位置）
+// 用户代码路径 (controllers, models 等文件夹所在位置)
 defined('USER_CODE_PATH') or define('USER_CODE_PATH', __BASE_PATH . '..' . __DS);
 ?>

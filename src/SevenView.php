@@ -25,7 +25,7 @@ class SevenView extends Smarty
         $this->setCacheDir(USER_CODE_PATH . '/cache/');
         
         $this->caching = SMARTY_CACHE;
-
+        $this->cache_lifetime = SMARTY_CACHE_LIFETIME;
         $this->debugging = SMARTY_DEBUG;
     }
 }

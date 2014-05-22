@@ -70,13 +70,13 @@ class SevenApplication
         $this->controller = new $cn();
         
         // 判断方法是否存在, 不存在默认执行 index 方法
-        /*
         if(!method_exists($this->controller, $an))
         {
             $a  = 'index';
             $an = 'indexAction';
         }
-        */
+
+        $uri = $_SERVER['REQUEST_URI'];
         
         // 获取模板文件
         $tpl_file = $this->pre . strtolower($c) . __DS . $a . '.tpl';
@@ -87,16 +87,23 @@ class SevenApplication
         $this->view->assign('__Action', ucfirst($a));
         $this->view->assign('__controller', strtolower($c));
         $this->view->assign('__action', $a);
+
+        $this->view->assign('__uri', $uri);
         
         $this->controller->setView($this->view);
+
         // 执行 Action
         $this->controller->actionBefore();
+
         if(method_exists($this->controller, $an))
             $this->controller->$an();
+
         $this->controller->actionAfter();
         
+        // 模板缓存 key
+        $uri = $c . '_' . $a . '_' . $uri;
         // 渲染模板
-        @$this->view->display($tpl_file);
+        @$this->view->display($tpl_file, md5($uri));
     }
 }
 ?>
