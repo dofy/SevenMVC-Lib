@@ -2,8 +2,8 @@
 /**
  * Author:  Seven Yu
  * E-Mail:  dofyyu@gmail.com
- * Version: 
- * Update:  
+ * Version: 2.0.1
+ * Update:  2014/05/22 
  */
 
 class ReCode
@@ -34,7 +34,11 @@ class ReCode
         $this->backgroundColor = $backgroundColor;
     }
 
-    private function getCode()
+    /**
+     * 获取验证码字符串
+     * @return string 验证码字符串
+     */
+	private function getCode()
     {
         $result = '';
         switch($this->mode)
@@ -61,6 +65,9 @@ class ReCode
         return $result;
     }
 
+    /**
+     * 获取验证码图片
+     */
     public function getImage($session_key, $noise = 0)
     {
         session_start();

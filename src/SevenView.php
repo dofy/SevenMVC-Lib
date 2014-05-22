@@ -2,8 +2,8 @@
 /**
  * Author:  Seven Yu
  * E-Mail:  dofyyu@gmail.com
- * Version: 1.0
- * Update:  11/20/08
+ * Version: 2.0.1
+ * Update:  2014/05/22 
  */
 
 /**
@@ -19,14 +19,14 @@ class SevenView extends Smarty
     
     private function init()
     {
-        $this->setTemplateDir(dirname(__FILE__) . '/../templates/');
-        $this->setCompileDir(dirname(__FILE__) . '/../templates_c/');
-        $this->setConfigDir(dirname(__FILE__) . '/../configs/');
-        $this->setCacheDir(dirname(__FILE__) . '/../cache/');
+        $this->setTemplateDir(USER_CODE_PATH . '/templates/');
+        $this->setCompileDir(USER_CODE_PATH . '/templates_c/');
+        $this->setConfigDir(USER_CODE_PATH . '/configs/');
+        $this->setCacheDir(USER_CODE_PATH . '/cache/');
         
-        //$this->caching = true;
+        $this->caching = SMARTY_CACHE;
 
-        //$this->debugging = true;
+        $this->debugging = SMARTY_DEBUG;
     }
 }
 ?>

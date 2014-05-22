@@ -2,9 +2,12 @@
 /**
  * Author:  Seven Yu
  * E-Mail:  dofyyu@gmail.com
- * Version: 1.0
- * Update:  11/20/08
+ * Version: 2.0.1
+ * Update:  2014/05/22 
  */
+
+// define
+define ('__VERSION', '2.0.1');
 
 define ('__DS', DIRECTORY_SEPARATOR);
 define ('__BASE_PATH', dirname(__file__) . __DS);

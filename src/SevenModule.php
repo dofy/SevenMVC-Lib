@@ -2,8 +2,8 @@
 /**
  * Author:  Seven Yu
  * E-Mail:  dofyyu@gmail.com
- * Version: 1.0
- * Update:  11/20/08
+ * Version: 2.0.1
+ * Update:  2014/05/22 
  */
 class SevenModule
 {
@@ -12,7 +12,7 @@ class SevenModule
     
     protected function __construct()
     {
-        $this->db = new SevenDB(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_CHARSET, DB_PORT);
+        $this->db = new SevenDB(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_CHAR, DB_PORT);
         $this->db->debug = DEBUG;
     }
 

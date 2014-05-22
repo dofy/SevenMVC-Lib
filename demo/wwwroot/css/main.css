@@ -1,0 +1,9 @@
+body {
+    font-family: consolas;
+}
+.copy {
+    font: 10px verdana;
+}
+.copy img {
+    vertical-align: middle;
+}

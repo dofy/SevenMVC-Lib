@@ -2,8 +2,8 @@
 /**
  * Author:  Seven Yu
  * E-Mail:  dofyyu@gmail.com
- * Version: 1.0
- * Update:  11/20/08
+ * Version: 2.0.1
+ * Update:  2014/05/22 
  */
 
  /**
@@ -21,7 +21,7 @@ class SevenController
             foreach($this->models as $model)
             {
                 $model = ucfirst(strtolower($model));
-                $m_file = __BASE_PATH . '..' . __DS . 'models' . __DS . $model . '.php';
+                $m_file = USER_CODE_PATH . __DS . 'models' . __DS . $model . '.php';
                 if(file_exists($m_file))
                 {
                     include $m_file;

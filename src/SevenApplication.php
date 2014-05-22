@@ -2,11 +2,11 @@
 /**
  * Author:  Seven Yu
  * E-Mail:  dofyyu@gmail.com
- * Version: 1.0
- * Update:  11/20/08
+ * Version: 2.0.1
+ * Update:  2014/05/22 
  */
 
-include dirname(__FILE__) . '/includes.php';
+require('includes.php');
 
 class SevenApplication
 {
@@ -46,7 +46,7 @@ class SevenApplication
         }
 
         $cn = $c . 'Controller';
-        $cf = __BASE_PATH . '..' . __DS . 'controllers' . __DS . $this->pre . $cn . '.php';
+        $cf = USER_CODE_PATH . __DS . 'controllers' . __DS . $this->pre . $cn . '.php';
         
         // 判断类文件是否存在, 不存在, 报错
         if(!file_exists($cf))
