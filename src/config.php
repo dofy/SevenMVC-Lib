@@ -24,10 +24,10 @@ defined('DB_CHAR') or define('DB_CHAR', 'utf8');
 // 是否显示 debug 信息
 defined('DEBUG') or define('DEBUG', false);
 
-// 是否开启 smarty cache
-defined('SMARTY_CACHE') or define('SMARTY_CACHE', true);
-// 
-defined('SMARTY_DEBUG') or define('SMARTY_DEBUG', false);
+// 是否开启 Smarty cache
+defined('Smarty_CACHE') or define('Smarty_CACHE', true);
+// 是否开启 Smarty 的 debug 模式
+defined('Smarty_DEBUG') or define('Smarty_DEBUG', false);
 
 // 用户代码路径 (controllers, models 等文件夹所在位置）
 defined('USER_CODE_PATH') or define('USER_CODE_PATH', __BASE_PATH . '..' . __DS);
