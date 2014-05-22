@@ -1,32 +1,17 @@
 ### 基于 SevenMVC-Lib 项目的目录结构
 
-* cache : Smarty 缓存文件夹
-* configs : Smarty 模板配置文件夹
-* controllers : MVC 控制器文件夹
-* libs : SevenMVC-Lib 源文件
-* models : MVC 模型文件夹
-* templates : Smarty 模板文件夹
-* templates_c : Smarty 模板编译文件夹
-* wwwroot : 站点根目录 (index.php 所在文件夹)
+* **cache** Smarty 缓存文件夹
+* **configs** Smarty 模板配置文件夹
+* **controllers** MVC 控制器文件夹
+* **libs** SevenMVC-Lib 源文件
+* **models** MVC 模型文件夹
+* **templates** Smarty 模板文件夹
+* **templates_c** Smarty 模板编译文件夹
+* **wwwroot** 站点根目录 (index.php 所在文件夹)
 
 ### DEMO 测试数据
 
 ```
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : localhost
-Source Server Version : 50612
-Source Host           : localhost:3306
-Source Database       : test
-
-Target Server Type    : MYSQL
-Target Server Version : 50612
-File Encoding         : 65001
-
-Date: 2014-05-22 10:44:57
-*/
-
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
