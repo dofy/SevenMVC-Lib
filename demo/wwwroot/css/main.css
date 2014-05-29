@@ -1,5 +1,9 @@
-body {
+body, input, textarea {
     font-family: consolas;
+}
+label {
+    display: inline-block;
+    width: 100px;
 }
 .copy {
     font: 10px verdana;

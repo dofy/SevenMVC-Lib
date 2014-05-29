@@ -14,6 +14,7 @@ class SevenApplication
     private $aflag;
     private $pre;
     private $controller;
+    private $tpl;
     private $view;
     
     /**
@@ -79,7 +80,7 @@ class SevenApplication
         $uri = $_SERVER['REQUEST_URI'];
         
         // 获取模板文件
-        $tpl_file = $this->pre . strtolower($c) . __DS . $a . '.tpl';
+        $this->tpl = $this->pre . strtolower($c) . __DS . $a . '.tpl';
         
         // 加载模板
         $this->view = new SevenView();
@@ -103,7 +104,7 @@ class SevenApplication
         // 模板缓存 key
         $uri = $c . '_' . $a . '_' . $uri;
         // 渲染模板
-        @$this->view->display($tpl_file, md5($uri));
+        @$this->view->display($this->controller->getTpl() ? $this->controller->getTpl() : $this->tpl, md5($uri));
     }
 }
 ?>

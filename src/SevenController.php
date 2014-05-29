@@ -11,6 +11,7 @@
   **/
 class SevenController
 {
+    protected $tpl;
     protected $view;
     protected $models;
     
@@ -45,6 +46,14 @@ class SevenController
     public function assign($key, $value)
     {
         $this->view->assign($key, $value);
+    }
+
+    /**
+     * 模板路径
+     */
+    public function getTpl()
+    {
+        return $this->tpl;
     }
     
     /**

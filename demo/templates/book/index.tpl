@@ -2,7 +2,7 @@
 
 <ul >
     {foreach from=$books item='item'}
-    <li ><a href="?c={$__controller}&a=detail&id={$item.id}">{$item.title}</a> <em>by {$item.author}</em> (Pages: {$item.pages})</li>
+    <li ><a href="?c={$__controller}&a=detail&id={$item.id}">{$item.title}</a> by <em>{$item.author}</em> (Pages: {$item.pages})</li>
     {/foreach}
 </ul>
 

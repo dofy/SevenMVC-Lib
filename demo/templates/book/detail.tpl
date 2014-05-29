@@ -4,7 +4,10 @@
 
     {if $item}
     <h2>{$item.title}</h2>
-    <em>by {$item.author}</em> (Pages: {$item.pages})
+    by <em>{$item.author}</em> (Pages: {$item.pages})
+
+{$item.content}
+
     {else}
     The Book is not found.
     {/if}

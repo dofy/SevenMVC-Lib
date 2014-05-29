@@ -6,9 +6,10 @@
 <meta charset="UTF-8" />
 <meta name="generator" content="editplus" />
 <meta name="author" content="Seven Yu" />
-<meta name="keywords" content="" />
+<meta name="keywords" content="SevenMVC-Lib php MVC" />
 <meta name="description" content="" />
 <link rel="stylesheet" href="css/main.css" />
+<script src="js/jquery.min.js" ></script>
 <script src="js/main.js" ></script>
 </head>
 
