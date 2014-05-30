@@ -27,7 +27,7 @@ class UserController extends SevenController
 
     public function actionBefore()
     {
-        $this->assign('title', 'Books');
+        $this->assign('title', 'Users');
     }
 }
 ?>
