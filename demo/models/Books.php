@@ -2,8 +2,8 @@
 /**
  * Author:  Seven Yu
  * E-Mail:  dofyyu@gmail.com
- * Version: 1.0
- * Update:  2009-3-5
+ * Version: 2.0.1
+ * Update:  2014/05/30 
  */
 class Books extends SevenModule
 {

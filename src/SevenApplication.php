@@ -3,7 +3,7 @@
  * Author:  Seven Yu
  * E-Mail:  dofyyu@gmail.com
  * Version: 2.0.1
- * Update:  2014/05/22 
+ * Update:  2014/05/30  
  */
 
 require('includes.php');

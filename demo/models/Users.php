@@ -2,8 +2,8 @@
 /**
  * Author:  Seven Yu
  * E-Mail:  dofyyu@gmail.com
- * Version: 1.0
- * Update:  2009-3-5
+ * Version: 2.0.1
+ * Update:  2014/05/30 
  */
 class Users extends SevenModule
 {
@@ -13,11 +13,16 @@ class Users extends SevenModule
         $this->table = 'users';
     }
     
-    public function checkUser($username, $password)
+    public function checkUser($name, $pass)
     {
-        $username = SevenDB::sqlstr($username);
-        $password = SevenDB::sqlstr($password);
-        return $this->getOne("select * from $this->table where `name` = '$username' and `pass` = md5('$password')");
+        $name = SevenDB::sqlstr($name);
+        $pass = SevenDB::sqlstr($pass);
+        return $this->getOne("select * from $this->table where `name` = '$name' and `pass` = md5('$pass')");
+    }
+
+    public function updateIp($id, $ip)
+    {
+        return $this->update(array('lastip'=>$ip), array('id' => $id));
     }
     
     public function getList($page = 1)
@@ -31,9 +36,9 @@ class Users extends SevenModule
         return $this->getOne("select * from $this->table where `id` = $id");
     }
 
-    public function getUserByName($username)
+    public function getUserByName($name)
     {
-        return $this->getOne("select * from $this->table where `name` = '" . SevenDB::sqlstr($username) . "'");
+        return $this->getOne("select * from $this->table where `name` = '" . SevenDB::sqlstr($name) . "'");
     }
 
     public function addUser($user)

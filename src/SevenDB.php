@@ -30,7 +30,7 @@ class SevenDB
     private function query($sql)
     {
         if($this->debug)
-            echo '// [ SQL DEBUG ] ' . $sql . "\n";
+            echo '<pre>[ SQL DEBUG ] ' . $sql . "</pre>";
         $this->last_sql = $sql;
         return mysql_query($sql);
     }
