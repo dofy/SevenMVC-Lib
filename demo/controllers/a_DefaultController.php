@@ -10,15 +10,26 @@ class DefaultController extends SevenController
 {
     public function __construct()
     {
-        $this->models = array('users', 'books');
+        $this->models = array('books');
         parent::__construct();
     }
 
     public function indexAction()
     {
+        $this->assign('name', COMM::getSs('name'));
+        $this->assign('ip', COMM::getSs('ip'));
+
         $this->assign('title', 'Index');
-        $this->assign('users', $this->Users->getList());
         $this->assign('books', $this->Books->getList());
+    }
+
+    public function actionBefore()
+    {
+        if(!COMM::getSs('islogin', false))
+        {
+            header('Location: ?c=login');
+        }
+        $this->assign('title', 'Index');
     }
 }
 ?>

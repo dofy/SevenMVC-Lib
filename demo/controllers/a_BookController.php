@@ -37,7 +37,7 @@ class BookController extends SevenController
         {
             $this->assign('json', array('rc'=>1, 'msg'=>'图书删除失败, 可能图书不存在.'));
         }
-        $this->tpl = 'inc/json.tpl';
+        $this->tpl = 'json.tpl';
     }
 
     public function saveAction()
@@ -70,11 +70,15 @@ class BookController extends SevenController
             }
         }
 
-        $this->tpl = 'inc/json.tpl';
+        $this->tpl = 'json.tpl';
     }
 
     public function actionBefore()
     {
+        if(!COMM::getSs('islogin', false))
+        {
+            header('Location: ?c=login');
+        }
         $this->assign('title', 'Books');
     }
 }

@@ -22,7 +22,7 @@ class Users extends SevenModule
 
     public function updateIp($id, $ip)
     {
-        return $this->update(array('lastip'=>$ip), array('id' => $id));
+        return $this->update(array('ip'=>$ip), array('id' => $id));
     }
     
     public function getList($page = 1)

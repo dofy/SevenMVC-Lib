@@ -1,4 +1,5 @@
 {include file="inc/header.tpl"}
+{include file="inc/amenu.tpl"}
 
 [ {if $item}Edit "{$item.title}"{else}Add a New Book{/if} ]
 

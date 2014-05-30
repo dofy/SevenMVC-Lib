@@ -1,4 +1,5 @@
 {include file="inc/header.tpl"}
+{include file="inc/amenu.tpl"}
 
 [<a href="?c={$__controller}&a=edit">Add New Book</a>]
 
