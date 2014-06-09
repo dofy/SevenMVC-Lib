@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Author:  Seven Yu
  * E-Mail:  dofyyu@gmail.com
